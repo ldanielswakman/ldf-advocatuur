@@ -9,6 +9,7 @@
   <meta name="description" content="<?php echo $site->description()->html() ?>">
   <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
 
+  <link rel="stylesheet" type="text/css" media="all" href="//code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
   <?php echo css('assets/css/main.css') ?>
 
@@ -16,32 +17,68 @@
   <script src="<?php echo url('assets/scripts/scripts.js'); ?>"></script>
 
 </head>
-<body>
+
+<body class="home">
 
   <header>
 		<div class="row">
 			<div class="col-md-4">
-		  	<a href="#">
+		  	<a href="#" class="logo">
 		  		<img src="<?php echo url('assets/images/logo.svg') ?>" alt="<?php echo $site->title()->html() ?>" />
 		  	</a>
 			</div>
 	  	<nav class="col-md-8">
-	  		testje
+	  		<ul class="menu">
+          <li><a href="#" class="current"><span class="text">traject</span></a></li>
+          <li><a href="#"><span class="text">diensten</span></a></li>
+          <li><a href="#"><span class="text">praktijk</span></a></li>
+          <li><a href="#"><span class="text">contact</span></a></li>
 	  	</nav>
 		</div>
   </header>
 
   <main id="main">
 
-  	<section>
-      <div id="intro" class="slide">
-    		<div class="row">
-    			<div class="col-md-8 col-md-offset-2">
-    				<h1>Hello</h1>
-    			</div>
-    		</div>
-      </div>
+  	<section id="intro">
+  		<div class="row">
+  			<div class="col-md-8 col-md-offset-4">
+  				<!-- <h1>begeleiding bij letselschade</h1> -->
+          <img src="<?php echo url('assets/images/hero.jpg') ?>" alt="" />
+  			</div>
+  		</div>
   	</section>
+
+    <section>
+      <div class="row row-nogttr">
+        <div class="col-md-8">
+          <blockquote class="quotebox box-red">
+            mijn expertise ligt bij juridisch advies bij letselschade en mijn passie is het begeleiden van benadeelden in het traject.
+          </blockquote>
+        </div>
+        <div class="col-md-4 col-nogutter">
+          <a href="#traject" class="readmore">
+            <i class="ion-chevron-down"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="traject" class="u-pv50">
+      <a href="traject.html" class="row">
+        <div class="col-md-10 col-md-offset-1 box-white">
+
+          <div class="row">
+            <div class="col-md-7">
+              <img src="<?php echo url('assets/images/traject-preview.png') ?>" alt="" />
+            </div>
+            <div class="col-md-4 question">
+              Hoe verloopt het letselschadetraject?
+            </div>
+          </div>
+
+        </div>
+      </a>
+    </section>
 
   	<section>
   		<div class="row">

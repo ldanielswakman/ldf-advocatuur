@@ -31,14 +31,50 @@ p {
   font-size: 1.25em;
   line-height: 1.7em;
 }
+a {
+  color: #103e5e;
+}
+a:hover {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
 
 
 
 /* --- (bs extension) --- */
 .row {
-  max-width: 1000px;
+  display: block;
+  max-width: 1100px;
   margin: 0 auto;
+} 
+.row.row-nogttr > [class^="col-"],
+.row.row-nogttr > [class*=" col-"] {
+  padding-left: 0;
+  padding-right: 0;
 }
+
+
+
+/* --- utility classes --- */
+.u-pv50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+
+/* --- colored box --- */
+.box-red {
+  padding: 50px;
+  background-color: #e64f56;
+}
+.box-white {
+  padding: 50px;
+  background-color: #fff;
+}
+
 
 
 /* --- page layout --- */
@@ -47,25 +83,126 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 120px;
-  padding: 15px 0;
+  height: 100px;
   z-index: 2;
 }
+main {
+}
 section {
+  /*padding: 40px 0;*/
   overflow: hidden;
 }
-.slide {
-  padding: 40px 0;
-}
-main section:first-child .slide {
-  padding-top: 120px; /* header height */
+section:first-child {
+  padding-top: 100px;
 }
 
 
 
-/* --- page-specific/content --- */
-#intro {
-  background: url('../images/banner-intro.jpg');
+/* --- header --- */
+header .logo {
+  display: block;
+  margin: 10px 0;
+}
+header .logo img {
+  height: 80px;
+}
+
+
+
+/* --- nav --- */
+nav ul.menu {
+  float: right;
+  list-style: none;
+}
+nav ul.menu li {
+  display: inline-block;
+  float: left;
+  height: 100px;
+}
+nav ul.menu a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  padding-top: 38px;
+  font-size: 1.4em;
+  text-align: center;
+}
+nav ul.menu a {
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+  color: #103e5e;
+}
+nav ul.menu a:hover,
+nav ul.menu a:focus {
+  -moz-opacity: 1;
+  opacity: 1;
+  color: #e64f56;
+}
+nav ul.menu li:last-child a {
+  padding-right: 0;
+}
+nav ul.menu .text {
+  display: inline-block;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+}
+nav ul.menu .current .text {
+  border-bottom-color: 
+}
+
+
+
+/* --- homepage blockquote --- */
+.quotebox {
+  position: relative;
+  padding-left: 120px;
+  color: #fff;
+  font-size: 2em;
+  line-height: 1.4em;
+}
+.quotebox:before {
+  content: "\201C";
+  position: absolute;
+  left: 40px;
+  top: 110px;
+  float: left;
+  font-size: 5em;
+  opacity: 0.3;
+}
+
+
+
+/* --- homepage intro --- */
+section#intro {
+  background-image: url('../images/banner-intro.jpg');
   background-size: cover;
-  min-height: 600px;
+}
+
+
+
+/* --- homepage readmore --- */
+.home .readmore {
+  display: inline-block;
+  padding: 15px 20px;
+  float: left;
+  background-color: #103e5e;
+  font-size: 3em;
+  color: #fff;
+  z-index: 1;
+}
+.home .readmore:hover,
+.home .readmore:focus {
+  background-color: #2fb3d2;
+}
+
+
+
+/* --- homepage traject question --- */
+.home #traject .question {
+  padding: 20px;
+  font-weight: bold;
+  color: #2fb3d2;
+  font-size: 2em;
+  line-height: 1.4em;
 }
