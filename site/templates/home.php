@@ -40,7 +40,7 @@
   <main id="main">
 
   	<section id="intro">
-  		<div class="row">
+  		<div class="row row-nogttr">
   			<div class="col-md-8 col-md-offset-4">
   				<!-- <h1>begeleiding bij letselschade</h1> -->
           <img src="<?php echo url('assets/images/hero.jpg') ?>" alt="" />
@@ -56,26 +56,32 @@
           </blockquote>
         </div>
         <div class="col-md-4 col-nogutter">
-          <a href="#traject" class="readmore">
-            <i class="ion-chevron-down"></i>
+          <a href="#traject" class="action">
+            <i class="ion-chevron-down ion-3x"></i>
           </a>
         </div>
       </div>
     </section>
 
     <section id="traject" class="u-pv50">
-      <a href="traject.html" class="row">
-        <div class="col-md-10 col-md-offset-1 box-white">
+      <a href="traject.html" class="row row-nogttr">
+        <div class="col-md-9 col-md-offset-1 box-white">
 
           <div class="row">
             <div class="col-md-7">
               <img src="<?php echo url('assets/images/traject-preview.png') ?>" alt="" />
             </div>
-            <div class="col-md-4 question">
+            <div class="col-md-5 question">
               Hoe verloopt het letselschadetraject?
             </div>
           </div>
 
+        </div>
+        <div class="col-md-2">
+          <div class="action u-w100 u-t15x">
+            meer info
+            <i class="ion-chevron-right u-ml05"></i>
+          </div>
         </div>
       </a>
     </section>

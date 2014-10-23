@@ -57,10 +57,35 @@ img {
 
 
 
+/* --- (ionicons extension) --- */
+.ion-2x {
+  font-size: 2em;
+}
+.ion-3x {
+  font-size: 3em;
+}
+
+
+
 /* --- utility classes --- */
+.u-w50 {
+  width: 50%;
+}
+.u-w100 {
+  width: 100%;
+}
+.u-ml05 {
+  margin-left: 0.5em;
+}
+.u-ml1 {
+  margin-left: 1em;
+}
 .u-pv50 {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+.u-t15x {
+  font-size: 1.5em;
 }
 
 
@@ -74,6 +99,35 @@ img {
   padding: 50px;
   background-color: #fff;
 }
+a .box-white:hover,
+a .box-white:focus {
+  background-color: #f7f7f7;
+}
+
+
+
+/* --- action buttons --- */
+.action {
+  display: inline-block;
+  padding: 15px 20px;
+  float: left;
+  background-color: #103e5e;
+  -webkit-box-shadow: 0 2px #071c2b;
+  -moz-box-shadow: 0 2px #071c2b;
+  box-shadow: 0 2px #071c2b;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+.action:hover,
+.action:focus {
+  background-color: #2fb3d2;
+  -webkit-box-shadow: 0 2px #289db8;
+  -moz-box-shadow: 0 2px #289db8;
+  box-shadow: 0 2px #289db8;
+  color: #fff;
+}
 
 
 
@@ -85,6 +139,7 @@ header {
   width: 100%;
   height: 100px;
   z-index: 2;
+  background-color: #f2f1ed;
 }
 main {
 }
@@ -175,25 +230,8 @@ nav ul.menu .current .text {
 
 /* --- homepage intro --- */
 section#intro {
-  background-image: url('../images/banner-intro.jpg');
+  /*background-image: url('../images/banner-intro.jpg');*/
   background-size: cover;
-}
-
-
-
-/* --- homepage readmore --- */
-.home .readmore {
-  display: inline-block;
-  padding: 15px 20px;
-  float: left;
-  background-color: #103e5e;
-  font-size: 3em;
-  color: #fff;
-  z-index: 1;
-}
-.home .readmore:hover,
-.home .readmore:focus {
-  background-color: #2fb3d2;
 }
 
 
