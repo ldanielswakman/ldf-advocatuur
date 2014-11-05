@@ -1,246 +1,522 @@
-@import url('http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic');
-@import url('http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic');
-@import url('http://weloveiconfonts.com/api/?family=entypo');
+@import url('//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic');
+@import url('//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic');
+@import url('//weloveiconfonts.com/api/?family=entypo');
 
 /* --- CSS Resets --- */
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,q,small,strong,sub,sup,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;margin:0;padding:0}article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object{display:block}a img{border:0}figure{position:relative}figure img{width:100%}
 
 body, html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
 
-  font-family: 'PT Sans';
-  line-height: 1.4em;
-  -webkit-font-smoothing: antialiased;
-  font-kerning: normal;
+	font-family: 'PT Sans';
+	line-height: 1.4em;
+	-webkit-font-smoothing: antialiased;
+	font-kerning: normal;
 
-  background-color: #f2f1ed;
-  color: #103e5e;
+	background-color: #f2f1ed;
+	color: #103e5e;
 }
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
+	font-weight: 700;
 }
 p {
-  font-size: 1.25em;
-  line-height: 1.7em;
+	font-size: 1.25em;
+	line-height: 1.7em;
 }
 a {
-  color: #103e5e;
+	color: #103e5e;
 }
 a:hover {
-  text-decoration: none;
+	text-decoration: none;
 }
 img {
-  max-width: 100%;
+	max-width: 100%;
 }
-
-
-
-/* --- (bs extension) --- */
-.row {
-  display: block;
-  max-width: 1100px;
-  margin: 0 auto;
-} 
-.row.row-nogttr > [class^="col-"],
-.row.row-nogttr > [class*=" col-"] {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-
-
-/* --- (ionicons extension) --- */
-.ion-2x {
-  font-size: 2em;
-}
-.ion-3x {
-  font-size: 3em;
-}
-
-
-
-/* --- utility classes --- */
-.u-w50 {
-  width: 50%;
-}
-.u-w100 {
-  width: 100%;
-}
-.u-ml05 {
-  margin-left: 0.5em;
-}
-.u-ml1 {
-  margin-left: 1em;
-}
-.u-pv50 {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-.u-t15x {
-  font-size: 1.5em;
-}
-
-
-
-/* --- colored box --- */
-.box-red {
-  padding: 50px;
-  background-color: #e64f56;
-}
-.box-white {
-  padding: 50px;
-  background-color: #fff;
-}
-a .box-white:hover,
-a .box-white:focus {
-  background-color: #f7f7f7;
-}
-
-
-
-/* --- action buttons --- */
-.action {
-  display: inline-block;
-  padding: 15px 20px;
-  float: left;
-  background-color: #103e5e;
-  -webkit-box-shadow: 0 2px #071c2b;
-  -moz-box-shadow: 0 2px #071c2b;
-  box-shadow: 0 2px #071c2b;
-  font-weight: bold;
-  text-align: center;
-  color: #fff;
-  z-index: 1;
-}
-.action:hover,
-.action:focus {
-  background-color: #2fb3d2;
-  -webkit-box-shadow: 0 2px #289db8;
-  -moz-box-shadow: 0 2px #289db8;
-  box-shadow: 0 2px #289db8;
-  color: #fff;
-}
-
 
 
 /* --- page layout --- */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  z-index: 2;
-  background-color: #f2f1ed;
+
+body > header,
+body > main,
+body > footer {
+	width: 100%;
 }
-main {
+
+body > header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
 }
-section {
-  /*padding: 40px 0;*/
-  overflow: hidden;
+
+header > nav,
+main > section,
+footer > div {
+	max-width: 1100px;
+	margin: 0 auto;
 }
-section:first-child {
-  padding-top: 100px;
+
+header > nav {
+	height: 100px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+body > main {
+	margin-top: 140px;
+}
+
+/* --- page --- */
+
+body {
+	background-color: #f2f1ed;
 }
 
 
+/* --- page header --- */
 
-/* --- header --- */
-header .logo {
-  display: block;
-  margin: 10px 0;
-}
-header .logo img {
-  height: 80px;
+body > header {
+	background-color: #f2f1ed;
 }
 
-
-
-/* --- nav --- */
-nav ul.menu {
-  float: right;
-  list-style: none;
-}
-nav ul.menu li {
-  display: inline-block;
-  float: left;
-  height: 100px;
-}
-nav ul.menu a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  padding-top: 38px;
-  font-size: 1.4em;
-  text-align: center;
-}
-nav ul.menu a {
-  -moz-opacity: 0.5;
-  opacity: 0.5;
-  color: #103e5e;
-}
-nav ul.menu a:hover,
-nav ul.menu a:focus {
-  -moz-opacity: 1;
-  opacity: 1;
-  color: #e64f56;
-}
-nav ul.menu li:last-child a {
-  padding-right: 0;
-}
-nav ul.menu .text {
-  display: inline-block;
-  padding-bottom: 5px;
-  border-bottom: 2px solid transparent;
-}
-nav ul.menu .current .text {
-  border-bottom-color: 
+header > nav {
+	text-align: right;
 }
 
-
-
-/* --- homepage blockquote --- */
-.quotebox {
-  position: relative;
-  padding-left: 120px;
-  color: #fff;
-  font-size: 2em;
-  line-height: 1.4em;
+header > nav a {
+	display: inline-block;
+	height: 100%;
+	padding: 35px 15px 35px 20px;
+	text-transform: lowercase;
+	font-size: 1.4em;
+	-webkit-opacity: 0.5;
+	-moz-opacity: 0.5;
+	-o-opacity: 0.5;
+	opacity: 0.5;
+	color: #103e5e;
 }
-.quotebox:before {
-  content: "\201C";
-  position: absolute;
-  left: 40px;
-  top: 110px;
-  float: left;
-  font-size: 5em;
-  opacity: 0.3;
+
+header > nav a.brand {
+	display: block;
+	float: left;
+	padding: 0 15px;
+	width: 33.333%;
+	height: 100%;
+	line-height: 0;
+	color: transparent;
+}
+
+header > nav a:hover,
+header > nav a.brand {
+	-webkit-opacity: 1.0;
+	-moz-opacity: 1.0;
+	-o-opacity: 1.0;
+	opacity: 1.0;
+}
+
+header > nav a.brand::before {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/logo.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: " ";
+}
+
+header > nav a span {
+	border-bottom: 2px solid transparent;
+	padding: 3px 0;
+}
+
+header > nav a:hover span {
+	border-bottom: 2px solid #103e5e;
 }
 
 
+/* --- homepage intro section --- */
 
-/* --- homepage intro --- */
-section#intro {
-  /*background-image: url('../images/banner-intro.jpg');*/
-  background-size: cover;
+section#intro h1 {
+	display: block;
+	float: right;
+	width: 66.666%;
+	padding: 25% 0 55px 45px;
+	background-image: url('../images/hero.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-transform: lowercase;
+	font-size: 2.8em;
+	font-family: 'PT Serif';
+	font-style: italic;
+	font-weight: normal;
+	color: white;
+	cursor: default;
+}
+
+section#intro a {
+	position: relative;
+	display: block;
+	clear: right;
+}
+
+section#intro blockquote {
+	padding: 50px 50px 50px 120px;
+	width: 75%;
+	background-color: #e64f56;
+	color: white;
+}
+
+section#intro blockquote p {
+	line-height: 1.4em;
+	text-transform: lowercase;
+	font-size: 1.8em;
+}
+
+section#intro blockquote::before {
+	position: absolute;
+	float: left;
+	left: 40px;
+	top: 125px;
+	font-size: 9em;
+	opacity: 0.3;
+	content: "\201c";
+}
+
+section#intro button {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 16.666%;
+	border: none;
+	padding: 6% 0 0 0;
+	width: 8.333%;
+	background-color: #103e5e;
+	text-transform: uppercase;
+	line-height: 0;
+	color: transparent;
+}
+
+section#intro button::before {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+/*	padding-top: 15%;*/
+	line-height: 100%;
+	font-size: 5em;
+	font-family: 'Entypo';
+	color: white;
+	content: "\e760";
+}
+
+section#intro a:hover blockquote p {
+	opacity: 0.7;
+}
+
+section#intro a:hover button {
+	background-color: #2fb3d2;
+}
+
+/* --- homepage trajectory preview section --- */
+
+section#traject {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+section#traject a {
+	display: block;
+	position: relative;
+}
+
+section#traject blockquote {
+	padding: 7% 5% 7% 52%;
+	width: 83.333%;
+	background-color: white;
+	color: #2fb3d2;
+}
+
+section#traject blockquote::before {
+	display: block;
+	position: absolute;
+	top: 60px;
+	bottom: 0;
+	left: 60px;
+	width: 41.666%;
+	background-image: url('../images/traject-preview.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: " ";
+}
+
+section#traject blockquote p {
+	line-height: 1.2em;
+	font-weight: bold;
+	font-size: 1.8em;
+}
+
+section#traject button {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: none;
+	padding: 1.2% 1% 1% 1%;
+	width: 16.666%;
+	background-color: #2fb3d2;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: white;
+}
+
+section#traject button::after {
+	margin-left: 1.5em;
+	font-family: 'Entypo';
+	content: '\e762';
+}
+
+section#traject a:hover blockquote p {
+	color: #103e5e;
+}
+
+section#traject a:hover button {
+	background-color: #e64f56;
 }
 
 
+/* --- homepage services section --- */
 
-/* --- homepage traject question --- */
-.home #traject .question {
-  padding: 20px;
-  font-weight: bold;
-  color: #2fb3d2;
-  font-size: 2em;
-  line-height: 1.4em;
+section#diensten {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+section#diensten p {
+	font-size: 1.5em;
+}
+
+section#diensten > p {
+	margin-bottom: 40px;
+	text-align: center;
+	text-transform: lowercase;
+	font-size: 1.7em;
+	font-weight: bold;
+	opacity: 0.3;
+}
+
+section#diensten ul {
+	list-style-type: none;
+}
+
+section#diensten ul::before,
+section#diensten ul::after {
+	display: table;
+	content: " ";
+}
+
+section#diensten ul::after {
+	clear: both;
+}
+
+section#diensten li {
+	float: left;
+	padding: 0 15px;
+	width: 33.333%;
+}
+
+section#diensten h2 {
+	position: relative;
+	margin: 0 -15px 40px -15px;
+	padding: 20% 20% 20% 40%;
+	text-transform: lowercase;
+	color: white;
+	cursor: default;
+}
+
+section#diensten h2::before {
+	display: block;
+	position: absolute;
+	top: 25%;
+	bottom: 25%;
+	left: 15%;
+	width: 20%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-size: center;
+	content: " ";
+}
+
+section#diensten li:nth-child(1) h2 {
+	background-color: #2fb3d2;
+}
+
+section#diensten li:nth-child(1) h2::before {
+	background-image: url('../images/service1.png');
+}
+
+section#diensten li:nth-child(2) h2 {
+	background-color: #e64f56;
+}
+
+section#diensten li:nth-child(2) h2::before {
+	background-image: url('../images/service2.png');
+}
+
+section#diensten li:nth-child(3) h2 {
+	background-color: #103e5e;
+}
+
+section#diensten li:nth-child(3) h2::before {
+	background-image: url('../images/service3.png');
+}
+
+
+/* --- homepage contact section --- */
+
+section#contact {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+section#contact > div {
+	position: relative;
+	padding-top: 16.666%;
+}
+
+section#contact span,
+section#contact a {
+	display: block;
+	position: absolute;
+	top: 0;
+	height: 100%;
+}
+
+section#contact span {
+	left: 0;
+	width: 50%;
+	padding: 6% 5%;
+	line-height: 100%;
+	text-transform: lowercase;
+	font-size: 2em;
+	font-weight: bold;
+	background-color: white;
+	color: #64c29f;
+}
+
+section#contact a {
+	width: 16.666%;
+	background-color: #64c29f;
+	line-height: 0;
+	color: transparent;
+}
+
+section#contact a:nth-child(2) {
+	right: 33.333%;
+}
+
+section#contact a:nth-child(3) {
+	right: 16.666%;
+}
+
+section#contact a:nth-child(4) {
+	right: 0;
+}
+
+section#contact a::before {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	line-height: 250%;
+	text-align: center;
+	font-size: 5em;
+	font-family: 'Entypo';
+	color: white;
+}
+
+section#contact a:nth-child(2)::before {
+	content: "\2709";
+}
+
+section#contact a:nth-child(3)::before {
+	content: "\01f4de";
+}
+
+section#contact a:nth-child(4)::before {
+	content: "\f318";
+}
+
+section#contact a:hover {
+	background-color: #58a887;
+}
+
+
+/* --- footer --- */
+
+footer {
+	padding: 50px 0;
+	background-color: #d4d0cd;
+	color: #666;
+}
+
+footer > div {
+	position: relative;
+}
+
+footer > div::before {
+	display: block;
+	position: absolute;
+	top: 10%;
+	bottom: 0;
+	left: 15px;
+	width: 32%;
+	background-image: url('../images/logo.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: " ";
+}
+
+footer nav,
+footer pre {
+	display: inline-block;
+}
+
+footer nav {
+	display: inline-block;
+	margin-left: 43%;
+}
+
+footer nav a {
+	display: block;
+	line-height: 1.2;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: white;
+}
+
+footer nav a:hover,
+footer nav a:active {
+	
+}
+
+footer pre {
+	float: right;
+	margin-right: 17%;
+	background: none;
+	font-family: inherit;
+	font-size: 1.15em;
+	opacity: 0.7;
 }
