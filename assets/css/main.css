@@ -10,33 +10,38 @@ body, html {
 	padding: 0;
 	width: 100%;
 	height: 100%;
-
-	font-family: 'PT Sans';
-	line-height: 1.4em;
-	-webkit-font-smoothing: antialiased;
-	font-kerning: normal;
-
 	background-color: #f2f1ed;
+	line-height: 1.4em;
+	font-family: 'PT Sans';
+	font-kerning: normal;
+	-webkit-font-smoothing: antialiased;
 	color: #103e5e;
 }
+
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 }
+
 p {
 	font-size: 1.25em;
 	line-height: 1.7em;
 }
+
 a {
 	color: #103e5e;
 }
+
 a:hover {
 	text-decoration: none;
 }
+
 img {
 	max-width: 100%;
 }
@@ -144,7 +149,7 @@ header > nav a:hover span {
 
 /* --- homepage intro section --- */
 
-section#intro h1 {
+section#home-intro h1 {
 	display: block;
 	float: right;
 	width: 66.666%;
@@ -161,26 +166,26 @@ section#intro h1 {
 	cursor: default;
 }
 
-section#intro a {
+section#home-intro a {
 	position: relative;
 	display: block;
 	clear: right;
 }
 
-section#intro blockquote {
+section#home-intro blockquote {
 	padding: 50px 50px 50px 120px;
 	width: 75%;
 	background-color: #e64f56;
 	color: white;
 }
 
-section#intro blockquote p {
+section#home-intro blockquote p {
 	line-height: 1.4em;
 	text-transform: lowercase;
 	font-size: 1.8em;
 }
 
-section#intro blockquote::before {
+section#home-intro blockquote::before {
 	position: absolute;
 	float: left;
 	left: 40px;
@@ -190,7 +195,7 @@ section#intro blockquote::before {
 	content: "\201c";
 }
 
-section#intro button {
+section#home-intro button {
 	display: block;
 	position: absolute;
 	top: 0;
@@ -204,7 +209,7 @@ section#intro button {
 	color: transparent;
 }
 
-section#intro button::before {
+section#home-intro button::before {
 	display: block;
 	position: absolute;
 	top: 0;
@@ -219,34 +224,34 @@ section#intro button::before {
 	content: "\e760";
 }
 
-section#intro a:hover blockquote p {
+section#home-intro a:hover blockquote p {
 	opacity: 0.7;
 }
 
-section#intro a:hover button {
+section#home-intro a:hover button {
 	background-color: #2fb3d2;
 }
 
 /* --- homepage trajectory preview section --- */
 
-section#traject {
+section#home-traject {
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
 
-section#traject a {
+section#home-traject a {
 	display: block;
 	position: relative;
 }
 
-section#traject blockquote {
+section#home-traject blockquote {
 	padding: 7% 5% 7% 52%;
 	width: 83.333%;
 	background-color: white;
 	color: #2fb3d2;
 }
 
-section#traject blockquote::before {
+section#home-traject blockquote::before {
 	display: block;
 	position: absolute;
 	top: 60px;
@@ -259,13 +264,13 @@ section#traject blockquote::before {
 	content: " ";
 }
 
-section#traject blockquote p {
+section#home-traject blockquote p {
 	line-height: 1.2em;
 	font-weight: bold;
 	font-size: 1.8em;
 }
 
-section#traject button {
+section#home-traject button {
 	display: block;
 	position: absolute;
 	top: 0;
@@ -281,33 +286,33 @@ section#traject button {
 	color: white;
 }
 
-section#traject button::after {
+section#home-traject button::after {
 	margin-left: 1.5em;
 	font-family: 'Entypo';
 	content: '\e762';
 }
 
-section#traject a:hover blockquote p {
+section#home-traject a:hover blockquote p {
 	color: #103e5e;
 }
 
-section#traject a:hover button {
+section#home-traject a:hover button {
 	background-color: #e64f56;
 }
 
 
 /* --- homepage services section --- */
 
-section#diensten {
+section#home-diensten {
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
 
-section#diensten p {
+section#home-diensten p {
 	font-size: 1.5em;
 }
 
-section#diensten > p {
+section#home-diensten > p {
 	margin-bottom: 40px;
 	text-align: center;
 	text-transform: lowercase;
@@ -316,27 +321,27 @@ section#diensten > p {
 	opacity: 0.3;
 }
 
-section#diensten ul {
+section#home-diensten ul {
 	list-style-type: none;
 }
 
-section#diensten ul::before,
-section#diensten ul::after {
+section#home-diensten ul::before,
+section#home-diensten ul::after {
 	display: table;
 	content: " ";
 }
 
-section#diensten ul::after {
+section#home-diensten ul::after {
 	clear: both;
 }
 
-section#diensten li {
+section#home-diensten li {
 	float: left;
 	padding: 0 15px;
 	width: 33.333%;
 }
 
-section#diensten h2 {
+section#home-diensten h2 {
 	position: relative;
 	margin: 0 -15px 40px -15px;
 	padding: 20% 20% 20% 40%;
@@ -345,7 +350,7 @@ section#diensten h2 {
 	cursor: default;
 }
 
-section#diensten h2::before {
+section#home-diensten h2::before {
 	display: block;
 	position: absolute;
 	top: 25%;
@@ -358,52 +363,52 @@ section#diensten h2::before {
 	content: " ";
 }
 
-section#diensten li:nth-child(1) h2 {
+section#home-diensten li:nth-child(1) h2 {
 	background-color: #2fb3d2;
 }
 
-section#diensten li:nth-child(1) h2::before {
+section#home-diensten li:nth-child(1) h2::before {
 	background-image: url('../images/service1.png');
 }
 
-section#diensten li:nth-child(2) h2 {
+section#home-diensten li:nth-child(2) h2 {
 	background-color: #e64f56;
 }
 
-section#diensten li:nth-child(2) h2::before {
+section#home-diensten li:nth-child(2) h2::before {
 	background-image: url('../images/service2.png');
 }
 
-section#diensten li:nth-child(3) h2 {
+section#home-diensten li:nth-child(3) h2 {
 	background-color: #103e5e;
 }
 
-section#diensten li:nth-child(3) h2::before {
+section#home-diensten li:nth-child(3) h2::before {
 	background-image: url('../images/service3.png');
 }
 
 
 /* --- homepage contact section --- */
 
-section#contact {
+section#home-contact {
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
 
-section#contact > div {
+section#home-contact > div {
 	position: relative;
 	padding-top: 16.666%;
 }
 
-section#contact span,
-section#contact a {
+section#home-contact span,
+section#home-contact a {
 	display: block;
 	position: absolute;
 	top: 0;
 	height: 100%;
 }
 
-section#contact span {
+section#home-contact span {
 	left: 0;
 	width: 50%;
 	padding: 6% 5%;
@@ -413,28 +418,29 @@ section#contact span {
 	font-weight: bold;
 	background-color: white;
 	color: #64c29f;
+	cursor: default;
 }
 
-section#contact a {
+section#home-contact a {
 	width: 16.666%;
 	background-color: #64c29f;
 	line-height: 0;
 	color: transparent;
 }
 
-section#contact a:nth-child(2) {
+section#home-contact a:nth-child(2) {
 	right: 33.333%;
 }
 
-section#contact a:nth-child(3) {
+section#home-contact a:nth-child(3) {
 	right: 16.666%;
 }
 
-section#contact a:nth-child(4) {
+section#home-contact a:nth-child(4) {
 	right: 0;
 }
 
-section#contact a::before {
+section#home-contact a::before {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -447,20 +453,198 @@ section#contact a::before {
 	color: white;
 }
 
-section#contact a:nth-child(2)::before {
+section#home-contact a:nth-child(2)::before {
 	content: "\2709";
 }
 
-section#contact a:nth-child(3)::before {
+section#home-contact a:nth-child(3)::before {
 	content: "\01f4de";
 }
 
-section#contact a:nth-child(4)::before {
+section#home-contact a:nth-child(4)::before {
 	content: "\f318";
 }
 
-section#contact a:hover {
+section#home-contact a:hover {
 	background-color: #58a887;
+}
+
+
+/* --- trajectory page --- */
+
+#traject section {
+	padding-top: 5em;
+	max-width: none;
+	margin: 0;
+}
+
+#traject section.slide {
+	position: relative;
+	min-height: 960px;
+}
+
+#traject section.slide::before,
+#traject section.slide::after {
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	content: " ";
+}
+
+#traject section span {
+	display: block;
+	margin: 0 15px;
+	line-height: 1.2;
+	text-transform: lowercase;
+	font-size: 1.7em;
+	font-weight: bold;
+}
+
+#traject section.slide span {
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 460px;
+}
+
+section#traject-heading,
+section#traject-intro {
+	background-color: white;
+}
+
+section#traject-heading {
+	padding-top: 3em;
+	padding-bottom: 5em;
+}
+
+section#traject-heading h1,
+section#traject-heading::after,
+section#traject-contact span {
+	text-align: center;
+}
+
+section#traject-heading:;after,
+section#traject-contact span {
+	font-weight: normal;
+}
+
+section#traject-heading::after {
+	display: block;
+	line-height: 1.4;
+	font-family: 'PT Serif', serif;
+	font-size: 1.6em;
+	font-style: italic;
+	content: "(scroll om te beginnen)";
+}
+
+section.slide#traject-intro::after {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	height: 180px;
+	width: 1100px;
+	background-image: url('../images/traject-01.png');
+	background-position: 100% center;
+}
+
+section.slide#traject-intro span {
+	max-width: 1100px;
+}
+
+section.slide#traject-herstel {
+	padding-top: 12em;
+	background-color: #2eb1d0;
+	color: white;
+}
+
+section.slide#traject-herstel::before {
+	position: absolute;
+	top: 7em;
+	right: 50%;
+	height: 360px;
+	width: 360px;
+	background-image: url('../images/traject-02.png');
+}
+
+section.slide#traject-herstel span {
+	margin: 0 auto 0 50%;
+	text-align: center;
+}
+
+section.slide#traject-overleg {
+	padding-top: 8em;
+	background-color: #64c2a0;
+	color: white;
+}
+
+section.slide#traject-overleg::before {
+	position: absolute;
+	top: 6em;
+	left: 50%;
+	height: 270px;
+	width: 450px;
+	background-image: url('../images/traject-03.png');
+}
+
+section.slide#traject-overleg span {
+	margin: 0 50% 0 auto;
+	text-align: center;
+}
+
+section.slide#traject-specialisten {
+	padding-top: 12em;
+	background-color: #e55156;
+	color: white;
+}
+
+section.slide#traject-specialisten::before {
+	position: absolute;
+	top: 6em;
+	right: 50%;
+	height: 450px;
+	width: 350px;
+	background-image: url('../images/traject-04.png');
+}
+
+section.slide#traject-specialisten span {
+	margin: 0 auto 0 50%;
+}
+
+section.slide#traject-eind {
+	background-color: #e4d8b7;
+	color: white;
+}
+
+section.slide#traject-eind::before {
+	position: absolute;
+	top: 3em;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	height: 450px;
+	width: 250px;
+	background-image: url('../images/traject-05.png');
+}
+
+section.slide#traject-eind span {
+	text-align: center;
+}
+
+section.slide#traject-eind span:nth-child(1) {
+	margin: 0 55% 0 auto;
+}
+
+section.slide#traject-eind span:nth-child(2) {
+	margin: 0 auto 0 55%;
+}
+
+section#traject-contact {
+	padding: 4em 0;
+}
+
+section#traject-contact span {
+	font-size: 1.4em;
 }
 
 

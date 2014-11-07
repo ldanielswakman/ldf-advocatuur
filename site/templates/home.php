@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
 		<main id="main">
-			<section id="intro">
+			<section id="home-intro">
 				<h1>Begeleiding bij letselschade</h1>
 				<a href="#traject">
 					<blockquote>
@@ -9,15 +9,15 @@
 					<button type="button" title="Traject">Traject</button>
 				</a>
 			</section>
-			<section id="traject">
-				<a href="#">
+			<section id="home-traject">
+				<a href="/traject">
 					<blockquote>
 						<p>Hoe verloopt het letselschadetraject?</p>
 					</blockquote>
 					<button type="button" title="Meer info">Meer info</button>
 				</a>
 			</section>
-			<section id="diensten">
+			<section id="home-diensten">
 				<p>Hierin kunnen we u van dienst zijn</p>
 				<ul>
 					<li>
@@ -34,7 +34,7 @@
 					</li>
 				</ul>
 			</section>
-			<section id="contact">
+			<section id="home-contact">
 				<div>
 					<span>Neem contact op voor een vrijblijvend kennismakingsgesprek:</span>
 					<a href="mailto:info@ldf-advocatuur.nl">Email: info@ldf-advocatuur.nl</a>

@@ -15,8 +15,8 @@
 	<body>
 		<header>
 			<nav title="<?php echo $site->title()->html() ?>">
-				<a href="#" class="brand" title="<?php echo $site->title()->html() ?>">Home</a>
-				<a href="#" class="current"><span class="text">Traject</span></a>
+				<a href="/" class="brand" title="<?php echo $site->title()->html() ?>">Home</a>
+				<a href="/traject"><span class="text">Traject</span></a>
 				<a href="#"><span class="text">Diensten</span></a>
 				<a href="#"><span class="text">Praktijk</span></a>
 				<a href="#"><span class="text">Contact</span></a>
