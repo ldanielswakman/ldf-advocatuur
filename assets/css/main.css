@@ -10,7 +10,6 @@ body, html {
 	padding: 0;
 	width: 100%;
 	height: 100%;
-	background-color: #f2f1ed;
 	line-height: 1.4em;
 	font-family: 'PT Sans';
 	font-kerning: normal;
@@ -76,7 +75,7 @@ header > nav {
 }
 
 body > main {
-	margin-top: 140px;
+	padding-top: 140px;
 }
 
 /* --- page --- */
@@ -477,29 +476,38 @@ section#home-contact a:hover {
 /* --- trajectory page --- */
 
 #traject section {
-	padding-top: 5em;
+/*	padding-top: 5em;*/
 	max-width: none;
 	margin: 0;
 }
 
 #traject section.slide {
 	position: relative;
-	min-height: 960px;
+	min-height: 720px;
 }
 
 #traject section.slide::before,
 #traject section.slide::after {
 	display: block;
+	margin: 0 auto;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
-	content: " ";
+}
+
+#traject section.slide::before {
+	margin-bottom: 15px;
+}
+
+#traject section.slide::after {
+	margin-top: 15px;
 }
 
 #traject section span {
 	display: block;
-	margin: 0 15px;
+	margin: 0 auto;
 	line-height: 1.2;
+	text-align: center;
 	text-transform: lowercase;
 	font-size: 1.7em;
 	font-weight: bold;
@@ -541,15 +549,15 @@ section#traject-heading::after {
 	content: "(scroll om te beginnen)";
 }
 
+section.slide#traject-intro {
+	padding: 10em 0;
+}
+
 section.slide#traject-intro::after {
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-	height: 180px;
-	width: 1100px;
+	padding-top: 23%;
+	width: 90%;
 	background-image: url('../images/traject-01.png');
-	background-position: 100% center;
+	content: " ";
 }
 
 section.slide#traject-intro span {
@@ -557,90 +565,64 @@ section.slide#traject-intro span {
 }
 
 section.slide#traject-herstel {
-	padding-top: 12em;
+	padding: 10em 0;
 	background-color: #2eb1d0;
 	color: white;
 }
 
 section.slide#traject-herstel::before {
-	position: absolute;
-	top: 7em;
-	right: 50%;
-	height: 360px;
-	width: 360px;
+	padding-top: 57%;
+	width: 60%;
 	background-image: url('../images/traject-02.png');
-}
-
-section.slide#traject-herstel span {
-	margin: 0 auto 0 50%;
-	text-align: center;
+	content: " ";
 }
 
 section.slide#traject-overleg {
-	padding-top: 8em;
+	padding: 10em 0;
 	background-color: #64c2a0;
 	color: white;
 }
 
 section.slide#traject-overleg::before {
-	position: absolute;
-	top: 6em;
-	left: 50%;
-	height: 270px;
-	width: 450px;
+	padding-top: 46%;
+	width: 75%;
 	background-image: url('../images/traject-03.png');
-}
-
-section.slide#traject-overleg span {
-	margin: 0 50% 0 auto;
-	text-align: center;
+	content: " ";
 }
 
 section.slide#traject-specialisten {
-	padding-top: 12em;
+	padding: 8em 0;
 	background-color: #e55156;
 	color: white;
 }
 
 section.slide#traject-specialisten::before {
-	position: absolute;
-	top: 6em;
-	right: 50%;
-	height: 450px;
-	width: 350px;
+	padding-top: 60%;
+	width: 48%;
 	background-image: url('../images/traject-04.png');
-}
-
-section.slide#traject-specialisten span {
-	margin: 0 auto 0 50%;
+	content: " ";
 }
 
 section.slide#traject-eind {
+	padding: 5em 0;
 	background-color: #e4d8b7;
 	color: white;
 }
 
 section.slide#traject-eind::before {
 	position: absolute;
-	top: 3em;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-	height: 450px;
-	width: 250px;
+	top: 10em;
+	left: 37.5%;
+	right: 37.5%;
+	margin: auto;
+	padding-top: 72%;
+	width: auto;
 	background-image: url('../images/traject-05.png');
-}
-
-section.slide#traject-eind span {
-	text-align: center;
-}
-
-section.slide#traject-eind span:nth-child(1) {
-	margin: 0 55% 0 auto;
+	content: " ";
 }
 
 section.slide#traject-eind span:nth-child(2) {
-	margin: 0 auto 0 55%;
+	margin-top: 80%;
 }
 
 section#traject-contact {
@@ -649,6 +631,138 @@ section#traject-contact {
 
 section#traject-contact span {
 	font-size: 1.4em;
+}
+
+@media (min-width: 720px) {
+	#traject section.slide {
+		min-height: 960px;
+	}
+
+	section.slide#traject-intro span {
+		text-align: left;
+	}
+
+	section.slide#traject-intro::after {
+		padding-top: 180px;
+	}
+
+	section.slide#traject-herstel {
+		padding-top: 12em;
+	}
+
+	section.slide#traject-herstel span {
+		margin: 0 auto 0 50%;*/
+		text-align: center;
+	}
+
+	section.slide#traject-herstel::before {
+		position: absolute;
+		top: 7em;
+		right: 50%;
+		height: 320px;
+		width: 320px;
+		padding-top: 0;
+	}
+
+	section.slide#traject-overleg {
+		padding-top: 8em;
+	}
+
+	section.slide#traject-overleg span {
+		margin: 0 50% 0 auto;
+		text-align: left;
+	}
+
+	section.slide#traject-overleg span {
+		margin: 0 50% 0 auto;
+	}
+
+	section.slide#traject-overleg::before {
+		position: absolute;
+		top: 6em;
+		left: 50%;
+		height: 242px;
+		width: 400px;
+		padding-top: 0;
+	}
+
+	section.slide#traject-specialisten {
+		padding-top: 12em;
+	}
+
+	section.slide#traject-specialisten::before {
+		position: absolute;
+		top: 6em;
+		right: 50%;
+		height: 315px;
+		width: 250px;
+		padding-top: 0;
+	}
+
+	section.slide#traject-specialisten span {
+		margin: 0 auto 0 50%;
+		text-align: left;
+	}
+
+	section.slide#traject-eind::before {
+		position: absolute;
+		top: 3em;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		height: 360px;
+		width: 200px;
+		padding-top: 0;
+	}
+
+	section.slide#traject-eind span:nth-child(1) {
+		margin: 0 60% 0 auto;
+	}
+
+	section.slide#traject-eind span:nth-child(2) {
+		margin: 0 auto 0 60%;
+	}
+}
+
+@media (min-width: 1100px) {
+	section.slide#traject-intro::after {
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		height: 180px;
+		width: 1100px;
+		background-position: 100% center;
+		padding-top: 0;
+	}
+
+	section.slide#traject-herstel::before {
+		height: 360px;
+		width: 360px;
+	}
+
+	section.slide#traject-overleg::before {
+		height: 270px;
+		width: 450px;
+	}
+
+	section.slide#traject-specialisten::before {
+		height: 450px;
+		width: 350px;
+	}
+
+	section.slide#traject-eind::before {
+		height: 450px;
+		width: 250px;
+	}
+
+	section.slide#traject-eind span:nth-child(1) {
+		margin: 0 55% 0 auto;
+	}
+
+	section.slide#traject-eind span:nth-child(2) {
+		margin: 0 auto 0 55%;
+	}
 }
 
 
