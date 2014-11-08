@@ -82,6 +82,10 @@ body > main {
 /* --- page --- */
 
 body {
+	background-color: #d4d0cd;
+}
+
+main {
 	background-color: #f2f1ed;
 }
 
@@ -648,11 +652,100 @@ section#traject-contact span {
 }
 
 
+/* --- services page --- */
+
+#diensten {
+	padding: 5em 0;
+}
+
+#diensten section + section {
+	margin-top: 5em;
+}
+
+section#diensten-heading {
+	display: none;
+}
+
+section#diensten-heading + section {
+	margin-top: 0;
+}
+
+#diensten h2,
+#diensten p {
+	margin: 0;
+	padding: 0 15px;
+}
+
+#diensten h2 {
+	position: relative;
+	font-size: 1.7em;
+}
+
+#diensten h2::before {
+	display: block;
+	margin-bottom: 0.5em;
+	padding-top: 4em;
+	width: 100%;
+	background-position: center 0%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: " ";
+}
+
+#diensten p {
+	font-size: 1.4em;
+}
+
+#diensten p + p {
+	margin-top: 0.5em;
+}
+
+section#dienst-1 h2::before {
+	background-image: url('../images/service1.png');
+}
+
+section#dienst-2 h2::before {
+	background-image: url('../images/service2.png');
+}
+
+section#dienst-3 h2::before {
+	background-image: url('../images/service3.png');
+}
+
+@media (min-width: 720px) {
+	#diensten h2::before {
+		display: block;
+		position: absolute;
+		top: -0.25em;
+		right: 100%;
+		width: 33.333%
+	}
+
+	#diensten h2,
+	#diensten p {
+		margin-left: 25%;
+	}
+}
+
+@media (min-width: 880px) {
+	#diensten h2,
+	#diensten p {
+		width: 660px;
+	}
+}
+
+@media (min-width: 1100px) {
+	#diensten h2,
+	#diensten p {
+		margin-right: 15%;
+		width: auto;
+	}
+}
+
 /* --- footer --- */
 
 footer {
 	padding: 50px 0;
-	background-color: #d4d0cd;
 	color: #666;
 }
 
