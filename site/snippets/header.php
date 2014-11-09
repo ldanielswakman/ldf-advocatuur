@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
+		<title><?php echo $site->titel() ?> | <?php echo $page->titel() ?></title>
 		<meta name="description" content="<?php echo $site->description()->html() ?>">
 		<meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
 		<link rel="stylesheet" type="text/css" media="all" href="//code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" />
@@ -14,11 +14,11 @@
 	</head>
 	<body>
 		<header>
-			<nav title="<?php echo $site->title()->html() ?>">
+			<nav title="<?php echo $site->titel() ?>">
 				<a href="/" class="brand" title="<?php echo $site->title()->html() ?>">Home</a>
 				<a href="/traject"><span class="text">Traject</span></a>
 				<a href="/diensten"><span class="text">Diensten</span></a>
-				<a href="#"><span class="text">Praktijk</span></a>
+				<a href="/praktijk"><span class="text">Praktijk</span></a>
 				<a href="#"><span class="text">Contact</span></a>
 			</div>
 		</header>
