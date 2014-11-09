@@ -93,6 +93,7 @@ main {
 
 body > header {
 	background-color: #f2f1ed;
+	/*DEBUG*/opacity: 0.5;
 }
 
 header > nav {
@@ -150,18 +151,24 @@ header > nav a:hover span {
 }
 
 
+/* --- homepage --- */
+
+#home {
+	padding-bottom: 4em;
+}
+
 /* --- homepage intro section --- */
 
 section#home-intro h1 {
 	display: block;
-	float: right;
-	width: 66.666%;
-	padding: 25% 0 55px 45px;
+	padding: 136px 0 32px 0;
 	background-image: url('../images/hero.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
+	line-height: 48px;
+	text-align: center;
 	text-transform: lowercase;
-	font-size: 2.8em;
+	font-size: 2.5em;
 	font-family: 'PT Serif';
 	font-style: italic;
 	font-weight: normal;
@@ -175,37 +182,49 @@ section#home-intro a {
 	clear: right;
 }
 
+section#home-intro a::before,
+section#home-intro a::after {
+	display: table;
+	content: "";
+}
+
+section#home-intro a::after {
+	clear: both;
+}
+
+section#home-intro a > * {
+	float: left;
+}
+
 section#home-intro blockquote {
-	padding: 50px 50px 50px 120px;
-	width: 75%;
+	padding: 2em 10% 2em 20%;
 	background-color: #e64f56;
+	font-size: 1.4em;
 	color: white;
 }
 
 section#home-intro blockquote p {
 	line-height: 1.4em;
 	text-transform: lowercase;
-	font-size: 1.8em;
 }
 
 section#home-intro blockquote::before {
 	position: absolute;
 	float: left;
-	left: 40px;
-	top: 125px;
-	font-size: 9em;
+	right: 85%;
+	top: 0.8em;
+	font-size: 6em;
 	opacity: 0.3;
 	content: "\201c";
 }
 
 section#home-intro button {
+	position: relative;
 	display: block;
-	position: absolute;
-	top: 0;
-	right: 16.666%;
+	float: left;
 	border: none;
-	padding: 6% 0 0 0;
-	width: 8.333%;
+	padding: 64px 0 0 0;
+	width: 88px;
 	background-color: #103e5e;
 	text-transform: uppercase;
 	line-height: 0;
@@ -215,13 +234,12 @@ section#home-intro button {
 section#home-intro button::before {
 	display: block;
 	position: absolute;
-	top: 0;
-	bottom: 0;
+	top: 50%;
+	bottom: 50%;
 	right: 0;
 	left: 0;
-/*	padding-top: 15%;*/
-	line-height: 100%;
-	font-size: 5em;
+	line-height: 0%;
+	font-size: 4.5em;
 	font-family: 'Entypo';
 	color: white;
 	content: "\e760";
@@ -235,6 +253,53 @@ section#home-intro a:hover button {
 	background-color: #2fb3d2;
 }
 
+@media (min-width: 512px) {
+	section#home-intro h1 {
+		padding: 37.5% 0 12.5% 48px;
+		line-height: 0;
+		text-align: left;
+	}
+
+	section#home-intro a {
+		font-size: 1.125em;
+	}
+}
+
+@media (min-width: 720px) {
+	section#home-intro h1 {
+		float: right;
+		width: 720px;
+		padding: 270px 0 90px 64px;
+		font-size: 2.75em;
+	}
+
+	section#home-intro a {
+		font-size: 1.25em;
+	}
+
+	section#home-intro blockquote {
+	padding: 2em 2em 2em 20%;
+		width: 87.5%;
+	}
+}
+
+@media (min-width: 960px) {
+	section#home-intro h1 {
+		float: right;
+		width: 720px;
+		padding: 270px 0 90px 64px;
+		font-size: 2.75em;
+	}
+
+	section#home-intro a {
+		font-size: 1.25em;
+	}
+
+	section#home-intro blockquote {
+		width: 75%;
+	}
+}
+
 /* --- homepage trajectory preview section --- */
 
 section#home-traject {
@@ -245,22 +310,32 @@ section#home-traject {
 section#home-traject a {
 	display: block;
 	position: relative;
+	font-size: 1.5em;
+}
+
+section#home-intro a::before,
+section#home-intro a::after {
+	display: table;
+	content: "";
+}
+
+section#home-intro a::after {
+	clear: both;
 }
 
 section#home-traject blockquote {
-	padding: 7% 5% 7% 52%;
-	width: 83.333%;
+	padding: 2em 32px 2em 32px;
+	width: 100%;
 	background-color: white;
+	text-align: center;
+	font-size: inherit;
 	color: #2fb3d2;
 }
 
 section#home-traject blockquote::before {
 	display: block;
-	position: absolute;
-	top: 60px;
-	bottom: 0;
-	left: 60px;
-	width: 41.666%;
+	margin: 0 auto 15px auto;
+	padding-top: 25%;
 	background-image: url('../images/traject-preview.png');
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -269,27 +344,28 @@ section#home-traject blockquote::before {
 
 section#home-traject blockquote p {
 	line-height: 1.2em;
+	font-size: inherit;
 	font-weight: bold;
-	font-size: 1.8em;
 }
 
 section#home-traject button {
 	display: block;
-	position: absolute;
-	top: 0;
-	right: 0;
+	position: relative;
 	border: none;
-	padding: 1.2% 1% 1% 1%;
-	width: 16.666%;
+	padding: 0.5em;
+	width: 100%;
 	background-color: #2fb3d2;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
-	font-size: 1.1em;
+	font-size: 0.5em;
 	font-weight: bold;
 	color: white;
 }
 
 section#home-traject button::after {
+	position: absolute;
+	top: 0.5em;
+	right: 1.5em;
 	margin-left: 1.5em;
 	font-family: 'Entypo';
 	content: '\e762';
@@ -301,6 +377,50 @@ section#home-traject a:hover blockquote p {
 
 section#home-traject a:hover button {
 	background-color: #e64f56;
+}
+
+@media (min-width: 480px) {
+	section#home-traject a {
+		font-size: 2em;
+	}
+
+	section#home-traject blockquote {
+		padding: 2em 64px 2em 64px;
+	}
+
+	section#home-traject blockquote::before {
+		padding-top: 19%;
+		width: 75%;
+	}
+}
+
+@media (min-width: 720px) {
+	section#home-traject blockquote::before {
+		padding-top: 100px;
+		width: 400px;
+	}
+}
+
+@media (min-width: 960px) {
+	section#home-traject blockquote {
+		padding: 7% 5% 7% 52%;
+		width: 83.333%;
+	}
+
+	section#home-traject blockquote::before {
+		position: absolute;
+		top: 60px;
+		bottom: 0;
+		left: 60px;
+		width: 41.666%;
+	}
+
+	section#home-traject button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 16.666%;
+	}
 }
 
 
@@ -339,18 +459,24 @@ section#home-diensten ul::after {
 }
 
 section#home-diensten li {
-	float: left;
 	padding: 0 15px;
-	width: 33.333%;
+}
+
+section#home-diensten li + li {
+	margin-top: 64px;
 }
 
 section#home-diensten h2 {
 	position: relative;
-	margin: 0 -15px 40px -15px;
-	padding: 20% 20% 20% 40%;
+	margin: 0 -15px 0 -15px;
+	padding: 1em 15px 1em 30%;
 	text-transform: lowercase;
 	color: white;
 	cursor: default;
+}
+
+section#home-diensten li h2 + p {
+	margin-top: 40px;
 }
 
 section#home-diensten h2::before {
@@ -358,8 +484,8 @@ section#home-diensten h2::before {
 	position: absolute;
 	top: 25%;
 	bottom: 25%;
-	left: 15%;
-	width: 20%;
+	left: 12.5%;
+	width: 22.5%;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-size: center;
@@ -390,6 +516,29 @@ section#home-diensten li:nth-child(3) h2::before {
 	background-image: url('../images/service3.png');
 }
 
+@media (min-width: 512px) {
+	section#home-diensten li p {
+		margin: 0 auto;
+		max-width: 480px;
+	}
+}
+
+@media (min-width: 960px) {
+	section#home-diensten li {
+		float: left;
+		width: 33.333%;
+	}
+
+	section#home-diensten li + li {
+		margin-top: 0;
+	}
+
+	section#home-diensten h2 {
+		margin: 0 -15px 40px -15px;
+		padding: 20% 20% 20% 40%;
+	}
+}
+
 
 /* --- homepage contact section --- */
 
@@ -400,24 +549,31 @@ section#home-contact {
 
 section#home-contact > div {
 	position: relative;
-	padding-top: 16.666%;
 }
 
-section#home-contact span,
-section#home-contact a {
+section#home-contact > div::before,
+section#home-contact > div::after {
+	display: table;
+	content: " ";
+}
+
+section#home-contact > div::after {
+	clear: both;
+}
+
+section#home-contact > div > * {
 	display: block;
-	position: absolute;
-	top: 0;
-	height: 100%;
+	float: left;
+	height: 100px;
 }
 
 section#home-contact span {
 	left: 0;
-	width: 50%;
-	padding: 6% 5%;
-	line-height: 100%;
+	width: 100%;
+	padding: 1em 15px;
+	line-height: 1.4;
 	text-transform: lowercase;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: bold;
 	background-color: white;
 	color: #64c29f;
@@ -425,22 +581,11 @@ section#home-contact span {
 }
 
 section#home-contact a {
-	width: 16.666%;
+	position: relative;
+	width: 33.333%;
 	background-color: #64c29f;
-	line-height: 0;
+	line-height: 100px;
 	color: transparent;
-}
-
-section#home-contact a:nth-child(2) {
-	right: 33.333%;
-}
-
-section#home-contact a:nth-child(3) {
-	right: 16.666%;
-}
-
-section#home-contact a:nth-child(4) {
-	right: 0;
 }
 
 section#home-contact a::before {
@@ -449,7 +594,6 @@ section#home-contact a::before {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	line-height: 250%;
 	text-align: center;
 	font-size: 5em;
 	font-family: 'Entypo';
@@ -470,6 +614,39 @@ section#home-contact a:nth-child(4)::before {
 
 section#home-contact a:hover {
 	background-color: #58a887;
+}
+
+@media (min-width: 720px) {
+	section#home-contact span,
+	section#home-contact a {
+		height: 140px;
+	}
+
+	section#home-contact span {
+		padding: 1.8em 30px;
+		width: 50%;
+		font-size: 1.6em;
+	}
+
+	section#home-contact a {
+		width: 16.666%;
+		line-height: 140px;
+	}
+}
+
+@media (min-width: 960px) {
+	section#home-contact span,
+	section#home-contact a {
+		height: 180px;
+	}
+
+	section#home-contact span {
+		font-size: 2em;
+	}
+
+	section#home-contact a {
+		line-height: 180px;
+	}
 }
 
 
@@ -769,7 +946,7 @@ section#traject-contact span {
 /* --- services page --- */
 
 #diensten {
-	padding: 5em 0;
+	padding: 200px 0 5em 0;
 }
 
 #diensten section + section {

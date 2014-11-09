@@ -1,5 +1,5 @@
 <?php snippet('header') ?>
-		<main id="main">
+		<main id="home">
 			<section id="home-intro">
 				<h1>Begeleiding bij letselschade</h1>
 				<a href="#traject">
