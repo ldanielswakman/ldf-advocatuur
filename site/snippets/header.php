@@ -19,7 +19,7 @@
 				<a href="/traject"><span class="text">Traject</span></a>
 				<a href="/diensten"><span class="text">Diensten</span></a>
 				<a href="/praktijk"><span class="text">Praktijk</span></a>
-				<a href="#"><span class="text">Contact</span></a>
+				<a href="/contact"><span class="text">Contact</span></a>
 				<button type="button"></button>
 				<script type="text/javascript">
 					$(function() {

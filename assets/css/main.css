@@ -28,9 +28,9 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 }
 
-p {
-	font-size: inherit;/*1.25em;*/
-	line-height: inherit;/*1.7em;*/
+h1, h2, h3, h4, h5, h6, p {
+	font-size: inherit;
+	line-height: inherit;
 }
 
 blockquote {
@@ -488,10 +488,6 @@ section#home-traject a:hover button {
 section#home-diensten {
 	padding-top: 50px;
 	padding-bottom: 50px;
-}
-
-section#home-diensten p,
-section#home-diensten h3 {
 	font-size: 1.3em;
 }
 
@@ -542,7 +538,8 @@ section#home-diensten h2 {
 	margin: 0 -15px 0 -15px;
 	padding: 15px 15px 15px 48px;
 	text-transform: lowercase;
-	font-size: 1.5em;
+	line-height: 1;
+	font-size: 1.15em;
 	letter-spacing: 0.5px;
 	color: white;
 	cursor: default;
@@ -812,13 +809,12 @@ section#traject-heading {
 }
 
 section#traject-heading h1,
-section#traject-heading::after,
-section#traject-contact span {
+section#traject-heading::after {
 	text-align: center;
 }
 
 section#traject-heading:;after,
-section#traject-contact span {
+section#traject-contact a {
 	font-weight: normal;
 }
 
@@ -909,9 +905,10 @@ section.slide#traject-eind span:nth-child(2) {
 
 section#traject-contact {
 	padding: 4em 0;
+	text-align: center;
 }
 
-section#traject-contact span {
+section#traject-contact a {
 	font-size: 1.4em;
 }
 
@@ -1092,8 +1089,10 @@ section#diensten-heading + section {
 	font-size: 1.4em;
 }
 
-#diensten p + p {
-	margin-top: 0.5em;
+
+#diensten * + p,
+#diensten p + * {
+	margin-top: 1em;
 }
 
 section#dienst-1 h2::before {
@@ -1295,6 +1294,236 @@ section#dienst-3 h2::before {
 @media (min-width: 1100px) {
 	#praktijk > section h2 {
 		margin-left: -15px;
+	}
+}
+
+
+/* --- contact page --- */
+
+#contact {
+	position: relative;
+}
+
+#contact header {
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 1100px;
+}
+
+#contact header h1 {
+	margin: 0 -15px;
+	padding: 0.5em 15px;
+	background-color: #64c29f;
+	font-size: 1.15em;
+	color: white;
+}
+
+#contact header + section,
+#contact section + section {
+	margin-top: 2em;
+}
+
+section#contact-details {
+	padding: 0 15px;
+}
+
+section#contact-details > * {
+	font-size: 1.3em;
+}
+
+section#contact-details p + p {
+	margin-top: 1em;
+}
+
+section#contact-form {
+	padding: 0 15px 2em 15px;
+}
+
+section#contact-form aside,
+section#contact-form form {
+	margin: 0 -15px;
+}
+
+section#contact-form aside {
+	background-color: white;
+	padding: 1em 15px;
+	font-size: 1.3em;
+	line-height: 1.4;
+	color: #64c29f;
+}
+
+section#contact-form aside h2 {
+	font-size: 1em;
+}
+
+section#contact-form aside + form {
+	margin-top: 2em;
+}
+
+section#contact-form fieldset {
+}
+
+section#contact-form label,
+section#contact-form label > span:first-child,
+section#contact-form input,
+section#contact-form textarea {
+	display: block;
+}
+
+section#contact-form label {
+	position: relative;
+	padding: 0.5em 15px;
+	width: 100%;
+}
+
+section#contact-form label::before,
+section#contact-form label::after {
+	display: table;
+	content: " ";
+}
+
+section#contact-form label::after {
+	clear: both;
+}
+
+section#contact-form label > span:first-child,
+section#contact-form input,
+section#contact-form textarea,
+section#contact-form button {
+	float: left;
+	padding: 0.25em 0;
+}
+
+section#contact-form label::before,
+section#contact-form label > span,
+section#contact-form input,
+section#contact-form textarea,
+section#contact-form button {
+	line-height: 1.3em;
+	font-size: 1.3em;
+}
+
+section#contact-form label > span:first-child {
+	width: 25%;
+}
+
+section#contact-form input,
+section#contact-form textarea {
+	border: 1px solid #d4d0cd;
+	border-radius: 4px;
+	padding: 0.25em 15px;
+	width: 75%;
+}
+
+section#contact-form input[required] + span,
+section#contact-form textarea[required] + span {
+	display: block;
+	position: absolute;
+	top: 0.5em;
+	right: 7.5px;
+	padding-right: inherit;
+	font-weight: bold;
+	color: #d4d0cd;
+}
+
+section#contact-form span.required::before {
+	content: "\25cf";
+}
+
+section#contact-form textarea {
+	min-width: 75%;
+	max-width: 75%;
+}
+
+section#contact-form button {
+	border: none;
+	border-radius: 4px;
+	padding: 0.25em 15px;
+	background-color: #64c29f;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+}
+
+section#contact-form button:hover {
+	background-color: #58a887;
+}
+
+section#contact-form .controls label::before {
+	display: block;
+	float: left;
+	padding: 0.4em 15px;
+	width: 75%;
+	text-align: right;
+	line-height: 1.7em;
+	font-size: 1em;
+	opacity: 0.25;
+	content: " \25cf  verplicht";
+}
+
+section#contact-form .controls button {
+	width: 25%;
+}
+
+@media (min-width: 720px) {
+	section#contact-details > div {
+		width: 50%;
+	}
+
+	section#contact-form::before,
+	section#contact-form::after {
+		display: table;
+		content: " ";
+	}
+
+	section#contact-form::after {
+		clear: both;
+	}
+	
+	section#contact-form aside,
+	section#contact-form form {
+		margin: 0;
+	}
+
+	section#contact-form aside + form {
+		margin-top: 0;
+	}
+
+	section#contact-form aside,
+	section#contact-form form {
+		float: right;
+	}
+
+	section#contact-form aside {
+		margin-top: 0.5em;
+		width: 33.333%;
+	}
+
+	section#contact-form form {
+		margin-left: -15px;
+		margin-right: 15px;
+		width: 66.666%;
+	}
+}
+
+@media (min-width: 1100px) {
+	#contact {
+		min-height: 720px;
+	}
+
+	section#contact-details > div {
+		position: absolute;
+		width: 260px;
+		margin-top: 0.5em;
+	}
+
+	section#contact-form aside {
+		width: 25%;
+	}
+
+	section#contact-form form {
+		margin-left: 0 0 0 25%;
+		width: 50%;
 	}
 }
 
