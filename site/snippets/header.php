@@ -14,11 +14,19 @@
 	</head>
 	<body>
 		<header>
-			<nav title="<?php echo $site->titel() ?>">
-				<a href="/" class="brand" title="<?php echo $site->title()->html() ?>">Home</a>
+			<nav class="collapsed" title="<?php echo $site->titel() ?>">
+				<a href="/" class="brand" title="<?php echo $site->titel()->html() ?>">Home</a>
 				<a href="/traject"><span class="text">Traject</span></a>
 				<a href="/diensten"><span class="text">Diensten</span></a>
 				<a href="/praktijk"><span class="text">Praktijk</span></a>
 				<a href="#"><span class="text">Contact</span></a>
-			</div>
+				<button type="button"></button>
+				<script type="text/javascript">
+					$(function() {
+						$('header > nav button').on('click', function() {
+							$('header > nav').toggleClass('collapsed');
+						});
+					});
+				</script>
+			</nav>
 		</header>

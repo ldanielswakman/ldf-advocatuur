@@ -33,6 +33,10 @@ p {
 	line-height: inherit;/*1.7em;*/
 }
 
+blockquote {
+	font-size: inherit;
+}
+
 a {
 	color: #103e5e;
 }
@@ -51,7 +55,6 @@ body > footer {
 }
 
 body > header {
-	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 2;
@@ -62,16 +65,6 @@ main > section,
 footer > div {
 	max-width: 1100px;
 	margin: 0 auto;
-}
-
-header > nav {
-	height: 100px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-body > main {
-	padding-top: 140px;
 }
 
 /* --- page --- */
@@ -92,15 +85,19 @@ body > header {
 }
 
 header > nav {
+	position: relative;
+	min-height: 70px;
+	background-color: #d4d0cd;
 	text-align: right;
 }
 
 header > nav a {
-	display: inline-block;
+	display: block;
+	padding: 0 15px;
 	height: 100%;
-	padding: 35px 15px 35px 20px;
 	text-transform: lowercase;
 	font-size: 1.4em;
+	line-height: 40px;
 	-webkit-opacity: 0.5;
 	-moz-opacity: 0.5;
 	-o-opacity: 0.5;
@@ -108,22 +105,30 @@ header > nav a {
 	color: #103e5e;
 }
 
-header > nav a.brand {
-	display: block;
-	float: left;
-	padding: 0 15px;
-	width: 33.333%;
-	height: 100%;
-	line-height: 0;
-	color: transparent;
+header > nav.collapsed {
+	background-color: #f2f1ed;
+}
+
+header > nav.collapsed a {
+	display: none;
 }
 
 header > nav a:hover,
-header > nav a.brand {
+header > nav a.brand,
+header > nav a.active {
 	-webkit-opacity: 1.0;
 	-moz-opacity: 1.0;
 	-o-opacity: 1.0;
 	opacity: 1.0;
+}
+
+header > nav a.brand {
+	display: block !important;
+	padding: 15px;
+	width: 66.666%;
+	height: 70px;
+	line-height: 0;
+	color: transparent;
 }
 
 header > nav a.brand::before {
@@ -133,6 +138,7 @@ header > nav a.brand::before {
 	background-image: url('../images/logo.png');
 	background-repeat: no-repeat;
 	background-size: contain;
+	background-position: 0% center;
 	content: " ";
 }
 
@@ -143,6 +149,64 @@ header > nav a span {
 
 header > nav a:hover span {
 	border-bottom: 2px solid #103e5e;
+}
+
+header > nav button {
+	display: block;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	border: none;
+	width: 40px;
+	height: 40px;
+	background-color: black;
+	opacity: 0.1;
+	cursor: pointer;
+}
+
+header > nav button:hover {
+	opacity: 0.2;
+}
+
+@media (min-width: 720px) {
+	header > nav {
+		padding: 30px 15px;
+		height: 100px;
+		background-color: #f2f1ed;
+	}
+
+	header > nav a {
+		float: left;
+		padding: 0;
+		width: 15%;
+	}
+
+	header > nav.collapsed a {
+		display: block;
+	}
+
+	header > nav a.brand {
+		margin: -15px 6.666% -15px 0;
+		padding: 0;
+		width: 33.333%;
+		height: 70px;
+	}
+
+	header > nav button {
+		display: none;
+	}
+}
+
+@media (min-width: 1100px) {
+	header > nav {
+		padding: 50px 15px;
+		height: 140px;
+	}
+
+	header > nav a.brand {
+		margin: -30px 6.666% -30px 0;
+		height: 100px;
+	}
 }
 
 
@@ -175,6 +239,7 @@ section#home-intro a {
 	position: relative;
 	display: block;
 	clear: right;
+	font-size: 1.25em;
 }
 
 section#home-intro a::before,
@@ -192,9 +257,8 @@ section#home-intro a > * {
 }
 
 section#home-intro blockquote {
-	padding: 2em 10% 2em 20%;
+	padding: 2em 15px 2em 20%;
 	background-color: #e64f56;
-	font-size: 1.4em;
 	color: white;
 }
 
@@ -218,8 +282,8 @@ section#home-intro button {
 	display: block;
 	float: left;
 	border: none;
-	padding: 64px 0 0 0;
-	width: 88px;
+	padding: 48px 0 0 0;
+	width: 64px;
 	background-color: #103e5e;
 	text-transform: uppercase;
 	line-height: 0;
@@ -234,7 +298,7 @@ section#home-intro button::before {
 	right: 0;
 	left: 0;
 	line-height: 0%;
-	font-size: 4.5em;
+	font-size: 3em;
 	font-family: 'Entypo';
 	color: white;
 	content: "\e760";
@@ -256,7 +320,7 @@ section#home-intro a:hover button {
 	}
 
 	section#home-intro a {
-		font-size: 1.125em;
+		font-size: 1.5em;
 	}
 }
 
@@ -269,7 +333,7 @@ section#home-intro a:hover button {
 	}
 
 	section#home-intro a {
-		font-size: 1.25em;
+		font-size: 1.75em;
 	}
 
 	section#home-intro blockquote {
@@ -284,10 +348,6 @@ section#home-intro a:hover button {
 		width: 720px;
 		padding: 270px 0 90px 64px;
 		font-size: 2.75em;
-	}
-
-	section#home-intro a {
-		font-size: 1.25em;
 	}
 
 	section#home-intro blockquote {
@@ -319,7 +379,7 @@ section#home-intro a::after {
 }
 
 section#home-traject blockquote {
-	padding: 2em 32px 2em 32px;
+	padding: 2em 32px 1em 32px;
 	width: 100%;
 	background-color: white;
 	text-align: center;
@@ -376,11 +436,11 @@ section#home-traject a:hover button {
 
 @media (min-width: 480px) {
 	section#home-traject a {
-		font-size: 2em;
+		font-size: 1.7em;
 	}
 
 	section#home-traject blockquote {
-		padding: 2em 64px 2em 64px;
+		padding: 2em 64px 1em 64px;
 	}
 
 	section#home-traject blockquote::before {
@@ -397,6 +457,10 @@ section#home-traject a:hover button {
 }
 
 @media (min-width: 960px) {
+	section#home-traject a {
+		font-size: 2em;
+	}
+
 	section#home-traject blockquote {
 		padding: 7% 5% 7% 52%;
 		width: 83.333%;
@@ -427,16 +491,19 @@ section#home-diensten {
 }
 
 section#home-diensten p {
-	font-size: 1.5em;
+	font-size: 1.3em;
 }
 
 section#home-diensten > p {
-	margin-bottom: 40px;
 	text-align: center;
 	text-transform: lowercase;
-	font-size: 1.7em;
 	font-weight: bold;
 	opacity: 0.3;
+}
+
+section#home-diensten > p + ul,
+section#home-diensten li h2 + p {
+	margin-top: 25px;
 }
 
 section#home-diensten ul {
@@ -455,6 +522,7 @@ section#home-diensten ul::after {
 
 section#home-diensten li {
 	padding: 0 15px;
+	line-height: 1.7;
 }
 
 section#home-diensten li + li {
@@ -464,26 +532,24 @@ section#home-diensten li + li {
 section#home-diensten h2 {
 	position: relative;
 	margin: 0 -15px 0 -15px;
-	padding: 1em 15px 1em 30%;
+	padding: 15px 15px 15px 48px;
 	text-transform: lowercase;
+	font-size: 1.5em;
+	letter-spacing: 0.5px;
 	color: white;
 	cursor: default;
-}
-
-section#home-diensten li h2 + p {
-	margin-top: 40px;
 }
 
 section#home-diensten h2::before {
 	display: block;
 	position: absolute;
-	top: 25%;
-	bottom: 25%;
-	left: 12.5%;
-	width: 22.5%;
+	top: 10px;
+	bottom: 10px;
+	left: 10px;
+	width: 28px;
 	background-repeat: no-repeat;
+	background-position: center;
 	background-size: contain;
-	background-size: center;
 	content: " ";
 }
 
@@ -512,6 +578,27 @@ section#home-diensten li:nth-child(3) h2::before {
 }
 
 @media (min-width: 512px) {
+	section#home-diensten > p {
+		font-size: 1.7em;
+	}
+
+	section#home-diensten > p + ul,
+	section#home-diensten li h2 + p {
+		margin-top: 40px;
+	}
+
+	section#home-diensten h2 {
+		padding: 1.5em 0 1.5em 15%;
+		font-size: 1.7em;
+	}
+
+	section#home-diensten h2::before {
+		top: 1em;
+		bottom: 1em;
+		left: 5%;
+		width: 5%;
+	}
+
 	section#home-diensten li p {
 		margin: 0 auto;
 		max-width: 480px;
@@ -531,6 +618,14 @@ section#home-diensten li:nth-child(3) h2::before {
 	section#home-diensten h2 {
 		margin: 0 -15px 40px -15px;
 		padding: 20% 20% 20% 40%;
+		font-size: 2em;
+	}
+
+	section#home-diensten h2::before {
+		top: 20%;
+		bottom: 20%;
+		left: 12.5%;
+		width: 22.5%;
 	}
 }
 
@@ -565,10 +660,10 @@ section#home-contact > div > * {
 section#home-contact span {
 	left: 0;
 	width: 100%;
-	padding: 1em 15px;
+	padding: 1.4em 15px;
 	line-height: 1.4;
 	text-transform: lowercase;
-	font-size: 1.5em;
+	font-size: 1.3em;
 	font-weight: bold;
 	background-color: white;
 	color: #64c29f;
@@ -590,7 +685,7 @@ section#home-contact a::before {
 	left: 0;
 	right: 0;
 	text-align: center;
-	font-size: 5em;
+	font-size: 3em;
 	font-family: 'Entypo';
 	color: white;
 }
@@ -609,6 +704,13 @@ section#home-contact a:nth-child(4)::before {
 
 section#home-contact a:hover {
 	background-color: #58a887;
+}
+
+@media (min-width: 480px) {
+	section#home-contact span {
+		padding-top: 1em;
+		font-size: 1.5em;
+	}
 }
 
 @media (min-width: 720px) {
@@ -823,7 +925,7 @@ section#traject-contact span {
 	}
 
 	section.slide#traject-herstel span {
-		margin: 0 auto 0 50%;*/
+		margin: 0 auto 0 50%;
 		text-align: center;
 	}
 
@@ -941,7 +1043,7 @@ section#traject-contact span {
 /* --- services page --- */
 
 #diensten {
-	padding: 200px 0 5em 0;
+	padding: 60px 0 5em 0;
 }
 
 #diensten section + section {
@@ -1041,7 +1143,7 @@ section#dienst-3 h2::before {
 
 #praktijk > header {
 	margin: 0 auto;
-	padding-top: 140px;
+	padding-top: 1em;
 	padding-bottom: 1em;
 	background-color: #2eb1d0;
 	font-size: 1.5em;
@@ -1049,7 +1151,6 @@ section#dienst-3 h2::before {
 }
 
 #praktijk > header h1 {
-	margin-top: 1em;
 	text-transform: uppercase;
 	font-weight: normal;
 }
@@ -1193,7 +1294,7 @@ section#dienst-3 h2::before {
 /* --- footer --- */
 
 footer {
-	padding: 50px 0;
+	padding: 50px 15px;
 	color: #666;
 }
 
@@ -1201,32 +1302,44 @@ footer > div {
 	position: relative;
 }
 
+footer > div::before,
+footer > div::after {
+	display: table;
+	content: " ";
+}
+
+footer > div::after {
+	clear: both;
+}
+
 footer > div::before {
 	display: block;
-	position: absolute;
-	top: 10%;
-	bottom: 0;
-	left: 15px;
-	width: 32%;
+	position: relative;
+	top: -15px;
+	padding-top: 12.5%;
+	width: 100%;
 	background-image: url('../images/logo.png');
 	background-repeat: no-repeat;
 	background-size: contain;
-	content: " ";
 }
 
 footer nav,
 footer pre {
-	display: inline-block;
+	display: block;
+	float: left;
+	width: 50%;
 }
 
 footer nav {
 	display: inline-block;
-	margin-left: 43%;
+/*	margin-left: 43%;*/
 }
 
 footer nav a {
 	display: block;
-	line-height: 1.2;
+	position: relative;
+/*	top: -0.125em;*/
+	line-height: 1.3;
 	font-size: 1.5em;
 	font-weight: bold;
 	color: white;
@@ -1234,14 +1347,51 @@ footer nav a {
 
 footer nav a:hover,
 footer nav a:active {
-	
+	color: white;
+	opacity: 0.5;
 }
 
 footer pre {
-	float: right;
-	margin-right: 17%;
+/*	float: right;*/
+/*	margin-right: 17%;*/
 	background: none;
 	font-family: inherit;
 	font-size: 1.15em;
 	opacity: 0.7;
+}
+
+@media (min-width: 720px) {
+	footer > div::before {
+/*		float: left;
+		top: 0;
+		width: 33.333%;
+		height: 9.5em;
+		margin-right: 16.666%;
+		background-position: 0% center;*/
+		content: none;
+	}
+
+	footer nav {
+		position: relative;
+		padding-left: 50%;
+		width: 75%;
+	}
+
+	footer nav::before {
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0%;
+		width: 44.444%;
+		background-image: url('../images/logo.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: 0% center;
+		content: " ";
+	}
+
+	footer pre {
+		width: 25%;
+	}
 }
