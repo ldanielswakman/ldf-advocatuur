@@ -665,7 +665,16 @@ section#home-contact > div > * {
 	height: 100px;
 }
 
-section#home-contact span {
+section#home-contact a {
+	position: relative;
+	width: 33.333%;
+	background-color: #64c29f;
+	line-height: 100px;
+	font-size: 3em;
+	color: transparent;
+}
+
+section#home-contact a:first-child {
 	left: 0;
 	width: 100%;
 	padding: 1.4em 15px;
@@ -675,16 +684,6 @@ section#home-contact span {
 	font-weight: bold;
 	background-color: white;
 	color: #64c29f;
-	cursor: default;
-}
-
-section#home-contact a {
-	position: relative;
-	width: 33.333%;
-	background-color: #64c29f;
-	line-height: 100px;
-	font-size: 3em;
-	color: transparent;
 }
 
 section#home-contact a::before {
@@ -699,15 +698,15 @@ section#home-contact a::before {
 	color: white;
 }
 
-section#home-contact a:nth-child(2)::before {
+section#home-contact a.email::before {
 	content: "\2709";
 }
 
-section#home-contact a:nth-child(3)::before {
+section#home-contact a.phone::before {
 	content: "\01f4de";
 }
 
-section#home-contact a:nth-child(4)::before {
+section#home-contact a.linked-in::before {
 	content: "\f318";
 }
 
@@ -715,45 +714,43 @@ section#home-contact a:hover {
 	background-color: #58a887;
 }
 
+section#home-contact a:first-child:hover {
+	background-color: white;
+	color: #58a887;
+}
+
 @media (min-width: 480px) {
-	section#home-contact span {
+	section#home-contact span,
+	section#home-contact a:first-child {
 		padding-top: 1em;
 		font-size: 1.5em;
 	}
 }
 
 @media (min-width: 720px) {
-	section#home-contact span,
 	section#home-contact a {
+		width: 16.666%;
 		height: 140px;
+		line-height: 140px;
+		font-size: 4em;
 	}
 
-	section#home-contact span {
+	section#home-contact a:first-child {
 		padding: 1.8em 30px;
 		width: 50%;
 		font-size: 1.6em;
 	}
-
-	section#home-contact a {
-		width: 16.666%;
-		line-height: 140px;
-		font-size: 4em;
-	}
 }
 
 @media (min-width: 960px) {
-	section#home-contact span,
 	section#home-contact a {
 		height: 180px;
-	}
-
-	section#home-contact span {
-		font-size: 2em;
-	}
-
-	section#home-contact a {
 		line-height: 180px;
 		font-size: 5em;
+	}
+
+	section#home-contact a:first-child {
+		font-size: 2em;
 	}
 }
 

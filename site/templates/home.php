@@ -33,11 +33,11 @@
 			</section>
 			<section id="home-contact">
 				<div>
-					<span><?php echo $page->conctact() ?></span>
-					<a href="mailto:info@ldf-advocatuur.nl">Email: info@ldf-advocatuur.nl</a>
-					<a href="tel:+31207371447">Telefoon: 020-737-1447</a>
-					<a href="https://www.linkedin.com/profile/view?id=287560016">LinkedIn: Liane Foe</a>
+					<a href="/contact"><?php echo $page->contact() ?></a>
+					<a class="email" href="mailto:info@ldf-advocatuur.nl">Email: info@ldf-advocatuur.nl</a>
+					<a class="phone" href="tel:+31207371447">Telefoon: 020-737-1447</a>
+					<a class="linked-in" href="https://www.linkedin.com/profile/view?id=287560016">LinkedIn: Liane Foe</a>
 				</div>
-			</contact>
+			</section>
 		</main>
 <?php snippet('footer') ?>
