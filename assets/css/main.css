@@ -490,7 +490,8 @@ section#home-diensten {
 	padding-bottom: 50px;
 }
 
-section#home-diensten p {
+section#home-diensten p,
+section#home-diensten h3 {
 	font-size: 1.3em;
 }
 
@@ -499,6 +500,13 @@ section#home-diensten > p {
 	text-transform: lowercase;
 	font-weight: bold;
 	opacity: 0.3;
+}
+
+section#home-diensten p + p,
+section#home-diensten li p + p,
+section#home-diensten p + h3,
+section#home-diensten li h3 + p {
+	margin-top: 1em;
 }
 
 section#home-diensten > p + ul,
@@ -675,6 +683,7 @@ section#home-contact a {
 	width: 33.333%;
 	background-color: #64c29f;
 	line-height: 100px;
+	font-size: 3em;
 	color: transparent;
 }
 
@@ -685,7 +694,7 @@ section#home-contact a::before {
 	left: 0;
 	right: 0;
 	text-align: center;
-	font-size: 3em;
+	font-size: inherit;
 	font-family: 'Entypo';
 	color: white;
 }
@@ -728,6 +737,7 @@ section#home-contact a:hover {
 	section#home-contact a {
 		width: 16.666%;
 		line-height: 140px;
+		font-size: 4em;
 	}
 }
 
@@ -743,6 +753,7 @@ section#home-contact a:hover {
 
 	section#home-contact a {
 		line-height: 180px;
+		font-size: 5em;
 	}
 }
 
