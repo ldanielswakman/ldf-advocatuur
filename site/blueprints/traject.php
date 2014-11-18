@@ -3,6 +3,9 @@
 title: Traject
 pages: false
 fields:
+  title:
+    label: _
+    type:  hidden
   titel:
     label: Titel
     type:  text
