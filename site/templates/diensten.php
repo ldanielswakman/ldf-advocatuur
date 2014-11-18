@@ -1,8 +1,8 @@
 <?php snippet('header') ?>
 		<main id="diensten">
-			<section id="diensten-heading">
+			<header>
 				<h1><?php echo $page->title() ?></h1>
-			</section>
+			</header>
 			<section id="dienst-1">
 				<?php echo $page->expertise_1()->kirbytext() ?>
 			</section>

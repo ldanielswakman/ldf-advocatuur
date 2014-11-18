@@ -10,23 +10,23 @@
 		<link rel="stylesheet" type="text/css" media="all" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
 		<?php echo css('assets/css/main.css') ?>
 		<script src="<?php echo url('https://code.jquery.com/jquery-1.11.1.min.js'); ?>"></script>
+		<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
 		<script src="<?php echo url('assets/scripts/scripts.js'); ?>"></script>
 	</head>
 	<body>
 		<header>
-			<nav class="collapsed" title="<?php echo $site->titel() ?>">
-				<a href="/" class="brand" title="<?php echo $site->titel()->html() ?>">Home</a>
-				<a href="/traject"><span class="text">Traject</span></a>
-				<a href="/diensten"><span class="text">Diensten</span></a>
-				<a href="/praktijk"><span class="text">Praktijk</span></a>
-				<a href="/contact"><span class="text">Contact</span></a>
+			<?php snippet('menu') ?>
+			<script id="button-template" type="text/html">
 				<button type="button"></button>
-				<script type="text/javascript">
-					$(function() {
-						$('header > nav button').on('click', function() {
-							$('header > nav').toggleClass('collapsed');
-						});
-					});
-				</script>
-			</nav>
+			</script>
+			<script type="text/javascript">
+				$(function() {
+					$('body > header > nav')
+						.append($($('#button-template').html()))
+							.addClass('collapsed')
+							.on('click', function() {
+								$('header > nav').toggleClass('collapsed');
+							});
+				});
+			</script>
 		</header>
