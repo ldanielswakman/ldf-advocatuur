@@ -1,14 +1,15 @@
-  <footer class="footer cf" role="contentinfo">
+		<footer>
+			<div>
+				<?php snippet('menu') ?>
+				<pre>LdF advocatuur
+Prof. Junkerslaan 8
+1185 JL Amstelveen
 
-    <div class="copyright">
-      <?php echo $site->copyright()->kirbytext() ?>
-    </div>
+020 737 1447
+info@ldf-advocatuur.nl</pre>
+			</div>
+		</footer>
 
-    <div class="colophon">
-      <a href="http://getkirby.com/made-with-kirby-and-love">Made with Kirby and <b>♥</b></a>
-    </div>
+	</body>
 
-  </footer>
-
-</body>
 </html>
