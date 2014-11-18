@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 		<main id="diensten">
 			<header>
-				<h1><?php echo $page->title() ?></h1>
+				<h1><?php echo $page->titel() ?></h1>
 			</header>
 			<section id="dienst-1">
 				<?php echo $page->expertise_1()->kirbytext() ?>
