@@ -1,7 +1,8 @@
-<nav title="<?php echo $site->titel() ?>">
-	<a href="/" class="home" title="<?php echo $site->titel()->html() ?>">Home</a>
-	<a href="/traject"><span class="text">Traject</span></a>
-	<a href="/diensten"><span class="text">Diensten</span></a>
-	<a href="/praktijk"><span class="text">Praktijk</span></a>
-	<a href="/contact"><span class="text">Contact</span></a>
+<nav>
+	<a href="<?php echo $site->url() ?>" class="home" title="<?php echo $site->titel()->html() ?>">Home</a>
+	<ul>
+	<?php foreach($pages->visible() as $p): ?>
+		<li><a <?php e($p->isOpen(), ' class="active"') ?> href="<?php echo $p->url() ?>"><?php echo $p->titel()->html() ?></a></li>
+	<?php endforeach ?>
+	</ul>
 </nav>
