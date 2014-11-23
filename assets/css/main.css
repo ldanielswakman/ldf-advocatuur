@@ -798,7 +798,7 @@ section#home-contact a:first-child:hover {
 
 #traject section.slide {
 	position: relative;
-	min-height: 720px;
+	min-height: 500px;
 }
 
 #traject section.slide::before,
@@ -841,7 +841,6 @@ section#traject-intro {
 
 section#traject-heading {
 	padding-top: 3em;
-	padding-bottom: 5em;
 }
 
 section#traject-heading h1,
@@ -949,9 +948,6 @@ section#traject-contact a {
 }
 
 @media (min-width: 720px) {
-	#traject section.slide {
-		min-height: 960px;
-	}
 
 	section.slide#traject-intro span {
 		text-align: left;
