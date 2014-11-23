@@ -46,8 +46,15 @@ a:hover {
 }
 
 
-/* --- page layout --- */
 
+/* --- extends entypo @ MaxCDN --- */
+i[class*="entypo"] {
+	font-style: normal;
+	font-family: Entypo;
+}
+
+
+/* --- page layout --- */
 body > header,
 body > main,
 body > footer {
@@ -67,6 +74,11 @@ footer > div {
 	margin: 0 auto;
 }
 
+.row {
+	margin: 0 auto;
+	max-width: 1100px;
+}
+
 /* --- page --- */
 
 body {
@@ -83,7 +95,6 @@ main {
 		padding-top: 100px;
 	}
 }
-
 @media (min-width: 1100px) {
 	main {
 		padding-top: 140px;
@@ -91,24 +102,43 @@ main {
 }
 
 
-/* --- page header --- */
 
-body > header {
+/* --- page header --- */
+header {
 	position: fixed;
 	background-color: #f2f1ed;
+	padding: 15px;
 }
 
-header > nav {
-	position: relative;
-	min-height: 70px;
-	background-color: #d4d0cd;
-	text-align: right;
+
+
+/* --- logo --- */
+a.home { display: inline-block; }
+a.home .text { display: none; }
+a.home img { height: 80px; }
+@media (max-width: 512px) {
+	a.home img { height: 60px; }
 }
 
-header > nav a {
+
+/* --- nav --- */
+nav {
+	background-color: #f2f1ed;
+}
+nav {
+	display: inline-block;
+	float: right;
+}
+nav ul li {
+	list-style: none;
+	display: inline-block;
+	float: left;
+}
+nav ul a {
 	display: block;
-	padding: 0 15px;
 	height: 100%;
+	margin: 20px;
+	border-bottom: 2px solid transparent;
 	text-transform: lowercase;
 	font-size: 1.4em;
 	line-height: 40px;
@@ -118,120 +148,72 @@ header > nav a {
 	opacity: 0.5;
 	color: #103e5e;
 }
-
-header > nav.collapsed {
-	background-color: #f2f1ed;
+nav ul li:last-child a { 
+	margin-right: 0; 
 }
-
-header > nav.collapsed a {
-	display: none;
+nav ul a:hover,
+nav ul a:focus {
+	border-bottom-color: #103e5e;
 }
-
-header > nav a:hover,
-header > nav a.home,
-header > nav a.active {
+nav ul a:hover,
+nav ul a:focus,
+nav ul a.active {
 	-webkit-opacity: 1.0;
 	-moz-opacity: 1.0;
 	-o-opacity: 1.0;
 	opacity: 1.0;
 }
-
-header > nav a.home {
-	display: block !important;
-	padding: 15px;
-	width: 66.666%;
-	height: 70px;
-	line-height: 0;
-	color: transparent;
+@media (max-width: 960px) {
+	nav ul a {
+		font-size: 1.2em;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
 }
-
-header > nav a.home::before {
-	display: block;
-	width: 100%;
-	height: 100%;
-	background-image: url('../images/logo.png');
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: 0% center;
-	content: " ";
-}
-
-header > nav a span {
-	border-bottom: 2px solid transparent;
-	padding: 3px 0;
-}
-
-header > nav a:hover span {
-	border-bottom: 2px solid #103e5e;
-}
-
-header > nav button {
-	display: block;
-	position: absolute;
-	top: 15px;
-	right: 15px;
-	border: none;
-	width: 40px;
-	height: 40px;
-	background-color: black;
-	opacity: 0.1;
-	cursor: pointer;
-}
-
-header > nav button:hover {
-	opacity: 0.2;
-}
-
-@media (min-width: 720px) {
-	header > nav {
-		padding: 30px 15px;
-		height: 100px;
+@media (max-width: 720px) {
+	nav ul {
+		display: none;
+		position: absolute;
+		right: 0;
+		top: 100%;
 		background-color: #f2f1ed;
+		box-shadow: -2px 2px rgba(0, 0, 0, 0.1);
 	}
-
-	header > nav a {
-		float: left;
-		padding: 0;
-		width: 15%;
-	}
-
-	header > nav.collapsed a {
+	nav.isExpanded ul {
 		display: block;
 	}
-
-	header > nav a.home {
-		margin: -15px 6.666% -15px 0;
-		padding: 0;
-		width: 33.333%;
-		height: 70px;
+	nav ul li {
+		display: block;
+		float: none;
 	}
-
-	header > nav button {
-		display: none;
+	nav ul li a {
+		margin: 10px 15px;
 	}
 }
 
-@media (min-width: 1100px) {
-	header > nav {
-		padding: 50px 15px;
-		height: 140px;
-	}
 
-	header > nav a {
-		float: left;
-		padding: 0;
-		width: 12.5%;
-	}
-
-	header > nav a.home {
-		margin: -30px 16.666% -30px 0;
-		height: 100px;
+/* --- nav-toggle --- */
+header #menu-toggle {
+	display: none;
+	float: right;
+	font-size: 2.5em;
+	line-height: 40px;
+	padding: 20px 15px;
+}
+@media (max-width: 720px) {
+	header #menu-toggle {
+		display: inline-block;
 	}
 }
+@media (max-width: 512px) {
+	header #menu-toggle {
+		padding: 10px;
+	}
+}
+
 
 
 /* --- homepage --- */
-
 #home {
 	padding-bottom: 4em;
 }
