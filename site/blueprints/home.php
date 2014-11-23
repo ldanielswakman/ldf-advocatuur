@@ -3,12 +3,14 @@
 title: Home
 pages: false
 fields:
-  title:
-    label: _
-    type:  hidden
   titel:
     label: Titel
     type:  text
+    icon: font
+  title:
+    label: Slug
+    type:  hidden
+    icon: code
   ondertitel:
     label: Ondertitel
     type:  text

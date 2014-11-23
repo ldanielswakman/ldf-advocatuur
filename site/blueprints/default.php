@@ -4,9 +4,11 @@ title: Page
 pages: true
 files: true
 fields:
-  title:
-    label: Title
+  titel:
+    label: Titel
     type:  text
-  text:
-    label: Text
-    type:  textarea
+    icon: font
+  title:
+    label: Slug
+    type:  hidden
+    icon: code

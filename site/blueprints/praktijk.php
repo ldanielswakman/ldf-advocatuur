@@ -3,12 +3,15 @@
 title: Praktijk
 pages: false
 fields:
-  title:
-    label: _
-    type:  hidden
   titel:
     label: Titel
+    description: text
     type:  text
+    icon: font
+  title:
+    label: Slug
+    type:  hidden
+    icon: code
   intro:
     label: Intro
     type:  text
