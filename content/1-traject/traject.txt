@@ -1,4 +1,4 @@
-Titel: Het letselschadetraject
+Titel: Traject
 
 ----
 
@@ -27,3 +27,7 @@ Eind-2: …om weer zo optimaal mogelijk van het leven te genieten!
 ----
 
 Contact: Neem contact op voor een vrijblijvend gesprek
+
+----
+
+Title: traject
