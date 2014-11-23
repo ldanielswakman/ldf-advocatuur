@@ -10,7 +10,7 @@
 				</a>
 			</section>
 			<section id="home-traject">
-				<a href="/traject">
+				<a href="<?php echo url('traject'); ?>">
 					<blockquote>
 						<?php echo $page->traject()->kirbytext() ?>
 					</blockquote>
@@ -30,6 +30,11 @@
 						<?php echo $page->dienst_3()->kirbytext() ?>
 					</li>
 				</ul>
+				<div class="row u-aligncenter u-pv20">
+					<div class="col-md-12">
+						<a href="<?php echo url('diensten'); ?>" class="btn btn-primary btn-lg">lees verder</a>
+					</div>
+				</div>
 			</section>
 			<section id="home-contact">
 				<div>

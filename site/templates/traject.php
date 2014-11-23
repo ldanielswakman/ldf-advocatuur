@@ -20,7 +20,7 @@
 				<span><?php echo $page->eind_2()->html() ?></span>
 			</section>
 			<section id="traject-contact">
-				<a href="/contact"><?php echo $page->contact()->html() ?></a>
+				<a class="btn btn-primary btn-lg" href="<?php echo url('contact'); ?>"><?php echo $page->contact()->html() ?></a>
 			</section>
 		</main>
 <?php snippet('footer') ?>

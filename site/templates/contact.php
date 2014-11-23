@@ -12,9 +12,9 @@ $contact_form = new contactform(array(
 snippet('header');
 ?>
 		<main id="contact">
-			<header>
+			<div id="intro">
 				<h1><?php echo $page->titel() ?></h1>
-			</header>
+			</div>
 			<section id="contact-details">
 				<div>
 					<?php echo $page->gegevens()->kirbytext() ?>

@@ -1,9 +1,9 @@
 <?php snippet('header') ?>
 		<main id="praktijk">
-			<header>
+			<div id="intro">
 				<h1><?php echo $page->titel() ?></h1>
 				<?php echo $page->intro()->kirbytext() ?>
-			</header>
+			</div>
 			<section>
 				<?php echo $page->eerste()->kirbytext() ?>
 			</section>
