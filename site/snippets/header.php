@@ -12,12 +12,12 @@
 		// checks if not on localhost, then serves assets from CDN
 		$local = strpos($_SERVER['SERVER_NAME'], 'localhost');
 		if($local === false) : 
-			echo css('//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css');
-			echo css('//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic');
-			echo css('//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic');
-			echo css('//weloveiconfonts.com/api/?family=entypo');
-			echo js('//code.jquery.com/jquery-1.11.1.min.js');
-			echo js('//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.2/fastclick.min.js');
+			echo css('https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css');
+			echo css('https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic');
+			echo css('https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic');
+			echo css('http://weloveiconfonts.com/api/?family=entypo');
+			echo js('https://code.jquery.com/jquery-1.11.1.min.js');
+			echo js('https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.2/fastclick.min.js');
 		else :
 			echo css('assets/css/lib/bootstrap.min.css');
 			echo css('assets/css/lib/entypo.css');
